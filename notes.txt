@@ -180,3 +180,155 @@ target is an anchor tag attribute that specifies where to open the link
 _blank specifies to open the link in a new tab.
 <a href="https://www.freecodecamp.org" target="_blank"> ... </a>
 
+Basic CSS
+CSS stands for Cascading Style Sheets
+By using style, you can change the color of text
+The color style is responsible for the color of an element’s text
+<h2 style="color: blue;">CatPhotoApp</h2>
+Use to style individual elements with inline CSS
+<style>
+  h2 {
+    color: red;
+  }
+</style>
+Used to create a CSS selector for all a specific element
+The use of { and } are for opening and closing around each element’s style rule
+Element’s style need to be between the { and }
+Add ; to the end of each element’s style rule
+Class are reusable style that can be added in HTML elements
+Can be used in the same CSS style on multiple HTML elements
+The order of the class declarations in the <style> section is what is important as the second declaration will always take precedence over the first
+<h2 class="blue-text">CatPhotoApp</h2>
+Use to connect the class with style
+Class elements inside HTML elements do not contain a .
+<style>
+  .blue-text {
+    color: blue;
+  }
+</style>
+Can have multiple class in one element by separating it with a space
+<img class="class1 class2">
+To do font size, the font-size CSS property
+Inside style
+h1 {
+  font-size: 30px;
+}
+By using the font-family property, you can set an element on which font you want to use
+h2 {
+  font-family: sans-serif;
+}
+You can also use custom web fonts for your website
+Google Fonts is a free library of web fonts that you can use in your CSS by referencing the font's URL.
+To import google font, copy the font’s URL from google fonts library and paste it in your HTML
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+font-family: FAMILY_NAME, GENERIC_NAME;
+GENERIC_NAME is optional, used as a fallback font in case the other specified font is not available
+Family names are case-sensitive and need to be wrapped in “ quotes ” if there is a space in the name.
+If one of the font is unavailable, can be used to degrade to another font
+p {
+  font-family: Helvetica, sans-serif;
+}
+Using the width property, it controls an element's width
+Use px (pixel) to specify the image’s width
+Use the CSS class larger-image or smaller-image then give a specific width
+<style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
+Put img with class to work
+CSS borders have properties like style, color and width.
+Specific elements can have multiple properties inside
+<style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+Using the CSS property border-radius can help round corners
+border-radius: 10px;
+Can also be specified by percentage
+border-radius: 50%;
+Using background-color can set element’s background color
+.green-background {
+  background-color: green;
+}
+Universal: * { }
+Selects everything
+Element: h1 { }
+Only selecting everything for one variable
+Class: .classname { }
+Selects all elements that has the same tag class name
+Id: #idname { }
+Selects all elements that has the same id name
+Has to be unique
+Inline: (rare)
+<tag style=”property:value;”>
+
+Descendant Selector
+Selects all B inside of A
+Plate apple
+Combine the Descendant & ID Selectors
+Selects all B inside of A but with Id
+Combine the Class Selector
+can combine the class selector with other selectors, like the type selector.
+ A.classname
+Comma Combinator
+can combine any selectors this way, and can specify more than two.
+ A , B
+The Universal Selector
+Can select everything
+*
+Combine the Universal Selector
+Selects all element inside of A
+ A *
+Adjacent Sibling Selector
+selects all B elements that directly follow A. Elements that follow one another are called siblings. They're on the same level, or depth.
+ A + B
+Padding, border, and margin are important properties control the space that surrounds each HTML element
+padding controls the amount of space between the element's content and its border
+used to generate space around an element's content, inside of any defined borders.
+CSS allows you to control the padding of all four individual sides of an element with the padding-top, padding-right, padding-bottom, and padding-left properties
+you can specify them all in one line, going from top, right, bottom, left
+ padding: 20px;
+ padding-top: 40px;
+padding: 10px 20px 10px 20px;
+margin controls the amount of space between an element's border and surrounding elements
+By setting margin to a negative value, the element will grow larger.
+CSS allows you to control the margin of all four individual sides of an element with the margin-top, margin-right, margin-bottom, and margin-left properties
+You can specify them all in one line, going from top, right, bottom, left
+ margin: 20px;
+ margin-top: 40px;
+margin: 10px 20px 10px 20px;
+[attr=value] matches and styles elements with a specific attribute value
+[type='radio'] {
+  margin: 20px 0px 20px 0px;
+}
+Pixels (px) are a type of length unit, which is what tells the browser how to size or space an item
+two main types of length units are absolute and relative
+Absolute unit tie to physical units of length: in (inches) and mm (millimeters)
+Relative unit are relative to another length value: em and rem
+There are several relative unit options that are tied to the size of the viewport.
+Text-align: center;
+Centers basically everything
+The most powerful way to overwrite an element is using !important
+color: red !important;
+Another way to represent colors is using the hexadecimal code (hex code)
+Usually uses decimals
+0-9 represents the values zero to nine
+A,B,C,D,E,F represents the values 10-15
+hex codes use 6 hexadecimal digits to represent colors, two each for red (R), green (G), and blue (B) components
+Hex codes can be shorten, for example: red's hex code #FF0000 can be shortened to #F00
+body {
+  color: #000000;
+}
+Another way you can represent colors in CSS is by using RGB values.
+Lowest is 0, highest is 255
+body {
+  background-color: rgb(255, 165, 0);
+}
+You can make a gradient by using:
+body  {
+ background-image: linear-gradient(saddlebrown, wheat);
+}
