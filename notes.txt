@@ -132,3 +132,51 @@ To show code snippets use:
 < = &lt;
 > = &gt;
 Surround the code snippets with <code> </code>
+
+HTML5 Element:
+HTML5 introduces more descriptive HTML tags. These include main, header, footer, nav, video, article, section and others.
+<main> ends with </main>
+Helps search engines and other developers find the main content of your page
+<img src=”.....”>
+Can add images
+img element are self-closing
+All img elements must have an alt attribute.
+<img src=”...” alt=”...”>
+Used for screen readers to improve accessibility and is displayed if the image fails to load.
+It’s ideal for alt attribute to not contain special characters unless needed
+Replit.com: to root out image in folder, add:
+src=”(name of folder)/(file name)”
+<a href=”...”>this link to …</a>
+a (anchor) elements are used to link content outside of your web page
+a elements needs a destination web address called an href attribute
+<a href=”...”>this link to …</a>
+Can be used to create internal links to jump to different sections within a web page
+Assign a link’s href attribute to a hash symbol # plus the value of the id attribute for the element you want to internally link. Add the same id attribute to the element you are linking to create an internal link.
+<a href="#contacts-header">Contacts</a>
+...
+<h2 id="contacts-header">Contacts</h2>
+You can nest links within other elements
+The text, link to …, within the a element is called anchor text, and will display the link to click
+<a href=" ... " target="...">link to freecodecamp.org</a>
+You can add a element to your website before you know where they will link. Can be handy when changing the behavior of a link using JavaScript
+<a href="#" target="_blank">
+You can make elements into links by nesting them within an a element
+<a href="#"><img src="..." alt="..."></a>
+
+
+The href in an anchor tag attribute that contains the URL address of the link
+id is an attribute that uniquely describes an element
+Using id attribute to style a single element and can be used to select and modify specific elements with JavaScript
+Should be unique
+<h2 id="cat-photo-app">
+Can be used to style be using CSS
+Not reusable and should be be applied to only one element
+Has a higher importance than a class so if both are applied in the same element and have conflicting style, the id will be applied
+#cat-photo-element {
+  background-color: green;
+}
+When the user clicks on the contacts link, it will bring them to the section of the web page with the contacts header element
+target is an anchor tag attribute that specifies where to open the link
+_blank specifies to open the link in a new tab.
+<a href="https://www.freecodecamp.org" target="_blank"> ... </a>
+
