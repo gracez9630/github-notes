@@ -332,3 +332,147 @@ You can make a gradient by using:
 body  {
  background-image: linear-gradient(saddlebrown, wheat);
 }
+
+Applied Visual Design
+Basics:
+Text align specifies the horizontal alignment of text in an element
+Text-align: center;
+Height property  changes the height
+Height: 40px;
+Width property changes the width
+Width: 40px;
+To make elements bold use <strong>
+There can also be a css in making a element bold
+p {
+Font-weight: bold;
+}
+To make elements underlined use <u>
+Can also be used in css
+p{
+ text-decorations: underline;
+}
+To italicize text use <em>
+Can also be used in css
+p{
+  font-style:italics;
+ }
+To strikethrough elements use <s>
+Can also be used in css
+text-decoration:line-through;
+To separate heading and paragraph 
+Use font-size to adjust sizes of an element using border
+border:3px solid yellow;
+Using rgba to adjust colors
+rgba(153, 153, 255, 0.6)
+Box shadow adds a box shadow to a element
+Opacity changes the transparent of an element
+Colors:
+Complementary colors complement each other
+Tertiary colors are made by mixing primary and secondary together
+Hsl helps adjust the tone of color by combining the hue, saturation and lightness
+hsl(180, 100%, 50%)
+Lightness is the amount of white or black in a color
+Linear gradients lets color transition to select elements
+Can also repeat
+Background: linear-gradient(gradient_direction, color 1, color 2, color 3 ... )
+background: repeating-linear-gradient(65deg, #F3ED6B 0px, #7BE6CF 40px, #BD6BE1 90px).
+Texture background adds a certain texture to the background
+body{background: url('some url of choice')}⁡
+Positioning:
+Where you want your elements to go
+Relative specifies how a css should move
+position: relative;
+Css offset can change how offset a relative item is in the normal flow of a page
+     top: 10px;
+      right: 10px;
+Absolute positioning locks element in place
+position: absolute;
+Fixed positioning locks element in place when when being scrolled down
+position: fixed;
+Z-index is used to overlap elements
+z-index: 1;
+Float remove elements from the flow of the code so that the element can be pushed left or right
+         float: right; 
+          width: 200px;
+Geometry:
+Box shadow stes a shadow on an element selected
+box-shadow: 5px 10px 10px 20px #43AA8B;
+::before and ::after are pseudo elements that makes things pop up before or after on a selected element
+h3::before { content:"cool &"; color: cyan; }
+Transform is one of the main property used with geometry
+Rotate and change what a shape looks like
+uses scale(), skewX(), skewY() and rotate
+Transform: scale (...)
+The animation properties control how the animation should behave and the @keyframes rule controls what happens during that animation.
+You can change the @keyframes rule for one of the elements by changing one of the element’s percentage
+There are 8 animation properties
+animation-name sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+animation-duration sets the length of time for the animation.
+can change the animation of a element timing differently
+#anim {
+  animation-name: colorful;
+  animation-duration: 3s;
+}
+@keyframes is how to specify exactly what happens within the animation over the duration.
+CSS properties for 0% is how the element displays in the opening scene
+CSS properties for 100% is how the element appears at the end, right before the credits roll
+@keyframes colorful {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+You can use CSS @keyframes to change the color of a button in its hover state.
+img {
+    width: 30px;
+  }
+  img:hover {
+    animation-name: width;
+    animation-duration: 500ms;
+  }
+ 
+  @keyframes width {
+    100% {
+      width: 40px;
+    }
+  }
+The animation-fill-mode specifies the style applied to an element when the animation has finished
+animation-fill-mode: forwards;
+Another animation property is the animation-iteration-count, which allows you to control how many times you would like to loop through the animation
+animation-iteration-count: 3;
+In CSS animations, the animation-timing-function property controls how quickly an animated element changes over the duration of the animation.
+The animation-timing-function says how the car accelerates and decelerates over the course of the drive.
+In CSS animations, Bezier curves are used with the cubic-bezier function
+The animation-timing-function automatically loops at every keyframe when the animation-iteration-count is set to infinite
+cubic-bezier(0.3, 0.4, 0.5, 1.6);
+Makes the motion seem more natural
+The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: p0, p1, p2, and p3
+This is done in CSS by declaring the x and y values of the p1 and p2 "anchor" points in the form: (x1, y1, x2, y2)
+p0 and p3 are set for you - they are the beginning and end points which are always located respectively at the origin (0, 0) and (1, 1)
+animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+by changing the p1 and p2 anchor points drives the creation of different Bezier curves, which controls how the animation progresses through time
+animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+animation-timing-function: linear;
+animation-timing-function: ease-out;
+When elements have a specified position, such as fixed or relative, the CSS offset properties right, left, top, and bottom can be used in animation rules to create movement.
+you can push the item downwards then upwards by setting the top property of the 50% keyframe to 50px, but having it set to 0px for the first (0%) and the last (100%) keyframe.
+Can move to other sides by typing:
+left: 25px;
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+  }
+}
+By changing the opacity of an animated element, it gradually fades
+opacity: 0.1;
